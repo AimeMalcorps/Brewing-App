@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <script src="{{url_for('static', filename = 'js/jquery-3.5.1.slim.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename = 'js/bootstrap.min.js')}}"></script>
+    <script>
+    function recupTemp()
+    {
+    	//recuperation temperature aquarium salon
+    	var req1 = new XMLHttpRequest();
+    	req1.open("GET","actu", true);
+    	req1.onreadystatechange = function (aEvt)
+    	{
+    	    if (req1.readyState == 4)
+    	    {
+    	        if(req1.status == 200)
+    	        {
+    	            document.getElementById("here").innerHTML = req1.responseText + " °C";
+    	            //recupTempAquaSalon();
+    	        }
+    		else
+    		{
+    		document.getElementById("here").innerHTML = "Erreur lors du chargement";
+    		}
+
+    	    }
+    	};
+    	req1.send(null);
+    }
+    
+    function recupTime()
+    {
+    	//recuperation temperature aquarium salon
+    	var req1 = new XMLHttpRequest();
+    	req1.open("GET","timer", true);
+    	req1.onreadystatechange = function (aEvt)
+    	{
+    	    if (req1.readyState == 4)
+    	    {
+    	        if(req1.status == 200)
+    	        {
+                  document.getElementById("ici").innerHTML = req1.responseText;
+    	            //recupTempAquaSalon();
+    	        }
+    		else
+    		{
+        document.getElementById("ici").innerHTML = "Erreur lors du chargement";
+    		}
+
+    	    }
+    	};
+    	req1.send(null);
+    }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Brasserie Raspberry">
+    <meta name="author" content="Aimé Malcorps">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>Brewing App</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="bg-dark">
+        <div class="container-fluid">
+          <div class="text-center">
+            <a href="/" class="text-white text-decoration-none">
+              <h2 class="text-white font-weight-bold"><span>Brewing App</span></h2>
+            </a>
+          </div>
+            <div class="row justify-content-center">
+              <nav class="navbar navbar-dark justify-content-center">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="true" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="container text-center justify-content-center">
+                  <div class="collapse" id="navbarHeader">
+                    <ul class="list-unstyled">
+                      <li><a href="/nouvellerecette" class="text-white">Nouvelle recette</a></li>
+                      <li><a href="/about" class="text-white">A propos</a></li>
+                      <li><a href="/contact" class="text-white">Contact</a></li>
+                      <li><a href="/shutdown" class="text-white">Eteindre</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+    </header>
+
+
+    {% block content %}{% endblock content %}
+
+  </body>
+</html>

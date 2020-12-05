@@ -1,0 +1,39 @@
+{% extends 'layouts/app.html'%}
+
+
+{% block content %}
+<section class="jumbotron text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h3>Nouvelle Recette</h3>
+    </div>
+    <div class="row justify-content-center">
+      <p>Votre recette a bien été créée !</p>
+    </div>
+  </div>
+</section>
+
+<div class="album py-0 bg-light">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col col-sm-8 col-md-6 col-lg-6 col-xl-5">
+          <div class="card mb-4 box-shadow">
+            <div class="card-body bg-dark">
+              <div class="text-white">
+                <h3 class="text-center">{{ temperature1.titre }}</h3>
+              </div>
+                <div class="text-center">
+                  <p class="text-muted">Cycle 1 : {{ temperature1.content1}} °C - {{ temperature1.content2 }} min</p>
+                  <p class="text-muted">Cycle 2 : {{ temperature1.content3}} °C - {{ temperature1.content4 }} min</p>
+                  <p class="text-muted">Cycle 3 : {{ temperature1.content5}} °C - {{ temperature1.content6 }} min</p>
+
+                </div>
+                    <small class="text-muted">{{duree_totale}} mins</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{% endblock content %}

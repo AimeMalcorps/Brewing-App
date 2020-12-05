@@ -1,0 +1,45 @@
+{% extends 'layouts/app.html'%}
+
+{% block content %}
+
+<section class="jumbotron text-center">
+  <div class="container">
+    <div class="row justify-content-center">
+      <h3>Cycle {{ i }}</h3>
+    </div>
+    <div class="row justify-content-center">
+      <p class="text-muted">{{ temp }} °C - {{ duree }} min</p>
+    </div>
+  </div>
+</section>
+
+<script>setInterval(function() {recupTime();}, 1000);</script>
+<script>setInterval(function() {recupTemp();}, 6000);</script>
+
+<div class="album py-0 bg-light">
+  <div class="container">
+    <div class="row justify-content-md-center">
+      <div class="col col-sm-8 col-md-6 col-lg-6 col-xl-5">
+        <div class="card mb-4 box-shadow">
+          <div class="card-body bg-dark">
+              <h5 id="here" class="text-center text-white"></h5>
+              <h6 id="ici" class="text-white text-center"></h6>
+            </div>
+            <div class="card box-shadow">
+              <div class="card-body bg-light">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn">
+                    <a role="button" href="/annule" class="btn btn-sm btn-danger">Annuler</a>
+                  </div>
+                  <div class="btn">
+                    <a role="button" href="/continue/{{recette.id}}" class="btn btn-sm btn-primary">Continuer</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
