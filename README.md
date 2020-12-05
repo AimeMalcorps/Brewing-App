@@ -17,9 +17,7 @@ Lorsqu'un des cycles se termine, la résistance se coupe vous permettant d'appor
 
 Bon brassage !
 
-
-
-
+_______________________________________________________________
 
 
 [ENGLISH VESION]
