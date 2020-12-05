@@ -1,7 +1,7 @@
 # Brewing-App
 
 Projet réalisé pour la création d'une micro-brasserie.
-Le but est d'automatiser une cuve de brassage, au travers d'un site web responsif avec Bootstrap.
+L'objectif est d'automatiser une cuve de brassage, au travers d'un site web responsif avec Bootstrap.
 
 Pour faire fonctionner le programme, vous aurez besoin d'une Raspberry Pi et une sonde DS-18B20.
 Sur le GPIO-17 de la Raspberry Pi, est branché un relais qui commandera les résistances de la cuve de brassage.
