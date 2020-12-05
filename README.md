@@ -1,5 +1,8 @@
 # Brewing-App
 
+[ENGLISH VESION COMING SOON]
+
+
 Projet réalisé pour la création d'une micro-brasserie.
 L'objectif est d'automatiser une cuve de brassage, au travers d'un site web responsif avec Bootstrap.
 
