@@ -9,7 +9,6 @@
     <script>
     function recupTemp()
     {
-    	//recuperation temperature aquarium salon
     	var req1 = new XMLHttpRequest();
     	req1.open("GET","actu", true);
     	req1.onreadystatechange = function (aEvt)
@@ -19,7 +18,6 @@
     	        if(req1.status == 200)
     	        {
     	            document.getElementById("here").innerHTML = req1.responseText + " °C";
-    	            //recupTempAquaSalon();
     	        }
     		else
     		{
@@ -33,7 +31,6 @@
     
     function recupTime()
     {
-    	//recuperation temperature aquarium salon
     	var req1 = new XMLHttpRequest();
     	req1.open("GET","timer", true);
     	req1.onreadystatechange = function (aEvt)
@@ -43,7 +40,6 @@
     	        if(req1.status == 200)
     	        {
                   document.getElementById("ici").innerHTML = req1.responseText;
-    	            //recupTempAquaSalon();
     	        }
     		else
     		{
