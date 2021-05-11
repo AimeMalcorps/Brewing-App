@@ -26,7 +26,7 @@ This project was created for a micro-brewery.
 The purpose is to control a brewing tank through a responsive website using Bootstrap.
 
 In order to run the program you'll need a Raspberry Pi and a DS-18B20 sensor.
-On GPIO-17, a electric relay is plugged in to command the heating elements.
+On GPIO-17, an electric relay is plugged in to command the heating elements.
 You can change the GPIO or use more of them by editing the 'brewery.py' file.
 
 To run the Flask server simply modify the IP adress at the end of the 'main.py' file.
